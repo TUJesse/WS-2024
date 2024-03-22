@@ -7,8 +7,8 @@ from pymongo import MongoClient
 from bson.json_util import dumps, loads
 from bson.objectid import ObjectId
 import graphene
-import HtmlTestRunner
-import unittest
+# import HtmlTestRunner
+# import unittest
 
 app = Flask(__name__)
 api = Api(app)
