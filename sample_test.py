@@ -24,13 +24,17 @@ def checkServiceForWord(url, keyword):
         return False
 
 # Test 1
+name = 'Test 1'
 url = 'http://127.0.0.1:5000/getProducts'
 result = checkServiceForWord(url, 'Jam')
+saveResult(name, url, result)
 print(result)
 
 # Test 2
+name = 'Test 2'
 url = 'http://127.0.0.1:5000'
 result1 = checkServiceForWord(url, '/getTitles')
+saveResult(name, url, result)
 print(result1)
 # finish up
 f.close()
