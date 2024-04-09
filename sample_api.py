@@ -7,22 +7,20 @@ from pymongo import MongoClient
 from bson.json_util import dumps, loads
 from bson.objectid import ObjectId
 import graphene
-# import HtmlTestRunner
-# import unittest
 
 app = Flask(__name__)
 api = Api(app)
 
-class HelloWorld(Resource):
+class HomePage(Resource):
     def get(self):
 
         apis = []
-        apis.append('/getProducts')
-        apis.append('/getTitles')
-        apis.append('/insertProduct')
+        apis.append('http://127.0.0.1:5000/getProducts: The MongoDb database returns a collection of products within the database.')
+        apis.append('http://127.0.0.1:5000/getTitles: Connects to the Mongodb database and returns all the titles of the products in the database.')
+        apis.append('http://127.0.0.1:5000/insertProduct: Allows the end user to insert a product into the database through url arguments.')
         return apis
 
-api.add_resource(HelloWorld, '/')
+api.add_resource(HomePage, '/')
 
 
 class GetProduct(Resource):
