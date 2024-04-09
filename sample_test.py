@@ -13,7 +13,6 @@ def checkServiceForWord(url, keyword):
     result = False
     try:
         x = requests.get(url)
-        #print(x.text)
         serverStatus=1
 
         if keyword in x.text:
